@@ -1,0 +1,20 @@
+$nomention
+$onlyIf[$guildID!=;]
+$authorIcon[$serverIcon[$guildID]]
+$thumbnail[$serverIcon[$guildID]]
+$author[$serverName[$guildID]]
+$serverInfo[**Server Name:** {name}
+**Region:** {region}
+**Current Owner:** {owner}
+**Guild ID:** {ID}
+**Verification Level:** {verificationLvl}
+**Emojis:** {emoji}
+**Large Server:** {large}
+**Total Members:** $membersCount
+**Total Channels:** $channelCount
+**Total Roles:** $roleCount
+**Roles:** $roleNames
+**Server Created On:** $creationDate[$guildID]
+**Bot Developer:** Pseudonymous123#5921]
+$footerIcon[$authorAvatar]
+$color[fffff0]
