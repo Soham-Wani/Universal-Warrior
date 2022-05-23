@@ -1,0 +1,16 @@
+$nomention
+$onlyIf[$guildID!=;]
+$try
+$if[$message==;]
+$description[🎲 You rolled  `$random[1;7]`]
+$color[fffff0]
+$else
+$if[$message!=;]
+$onlyIf[$isNumber[$message[1]]==true;Please put in a valid number to roll upto! Use syntax `&roll <optional number to roll upto>`]
+$description[🎲 You rolled  `$random[1;$sum[$message[1];1]]`]
+$color[fffff0]
+$endif
+$endif
+$catch
+You sure I can handle that? Unanticipated error `$error[message]`
+$endtry
