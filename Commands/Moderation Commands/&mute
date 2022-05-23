@@ -1,0 +1,42 @@
+$nomention
+$allowRoleMentions[]
+$onlyIf[$guildID!=;]
+$onlyPerms[ban;kick; You don't have the `BAN_MEMBERS`, `KICK_MEMBERS` and `TIMEOUT_MEMBERS` permissions.]
+$argsCheck[>2; Try doing that again with the syntax `&mute <time in minutes only> <@user/id>`.]
+$onlyBotPerms[ban;kick; I don't have the `BAN_MEMBERS`, `KICK_MEMBERS` and `TIMEOUT_MEMBERS` permissions.]
+$onlyIf[$isNumber[$message[1]]==true;Please input the time correctly in minutes only. Only natural numbers upto 20160 are allowed. Use the syntax `&timeout <time in minutes only> <@user/id>`]
+$if[$isNumber[$message[2]]==true]
+$onlyIf[$message[2]!=$authorID; You can't timeout yourself idiot!]
+$onlyIf[$message[2]!=976547251595919462; For real? You want to timeout me? The audacity to try that! Jeez!]
+$onlyIf[$userExists[$message[2]]==true; Please provide a valid user ID.]
+$try
+$timeout[$noMentionMessage;$message[2]]
+$addCmdReactions[✅]
+$sendEmbedMessage[961161255375241257;; Moderation Case - Timeout;;**User**
+$username[$message[2]]#$discriminator[$message[2]] (`$message[2]`)
+**Responsible Moderator**
+$username#$discriminator[] (`$authorID`)
+**Time**
+$message[1] minute(s);fffff0;;;;;;;true;false]
+$catch
+Unanticipated error: `$error[message]`
+$endtry
+$else
+$if[$isNumber[$message[2]]==false]
+$onlyIf[$mentioned[1]!=$authorID; You can't timeout yourself idiot!]
+$onlyIf[$mentioned[1]!=976547251595919462; For real? You want to timeout me? The audacity to try that! Jeez!]
+$onlyIf[$userExists[$mentioned[1]]==true; Please mention a valid user.]
+$try
+$timeout[$noMentionMessage;$mentioned[1]]
+$addCmdReactions[✅]
+$sendEmbedMessage[961161255375241257;; Moderation Case - Timeout;;**User**
+$username[$mentioned[1]]#$discriminator[$mentioned[1]] (`$mentioned[1]`)
+**Responsible Moderator**
+$username#$discriminator[] (`$authorID`)
+**Time**
+$message[1];fffff0;;;;;;;true;false]
+$catch
+Unanticipated error: `$error[message]`
+$endtry
+$endif
+$endif
