@@ -1,0 +1,32 @@
+$nomention
+$allowRoleMentions[]
+$onlyIf[$guildID!=;]
+$onlyPerms[ban;kick; You don't have the `BAN_MEMBERS`, `KICK_MEMBERS` and `TIMEOUT_MEMBERS` permissions.]
+$argsCheck[>1; Try doing that again with the syntax `&untimeout <@user/id>`.]
+$onlyBotPerms[ban;kick; I don't have the `BAN_MEMBERS`, `KICK_MEMBERS` and `TIMEOUT_MEMBERS` permissions.]
+$if[$isNumber[$message[1]]==true]
+$onlyIf[$userExists[$message[1]]==true; Please provide a valid user ID to untimeout.]
+$try
+$untimeout[$message[1]]
+$addCmdReactions[✅]
+$sendEmbedMessage[961161255375241257;; Moderation Case - Untimeout;;**User**
+$username[$message[1]]#$discriminator[$message[1]] (`$message[1]`)
+**Responsible Moderator**
+$username#$discriminator[] (`$authorID`);fffff0;;;;;;;true;false]
+$catch
+Unanticipated error: `$error[message]`
+$endtry
+$else
+$if[$isNumber[$message[2]]==false]
+$onlyIf[$userExists[$mentioned[1]]==true; Please mention a valid user to untimeout.]
+$try
+$untimeout[$mentioned[1]]
+$addCmdReactions[✅]
+$sendEmbedMessage[961161255375241257;; Moderation Case - Untimeout;;**User**
+$username[$mentioned[1]]#$discriminator[$mentioned[1]] (`$mentioned[1]`)
+**Responsible Moderator**
+$username#$discriminator[] (`$authorID`);fffff0;;;;;;;true;false]
+$catch
+Unanticipated error: `$error[message]`
+$endtry
+$endif
