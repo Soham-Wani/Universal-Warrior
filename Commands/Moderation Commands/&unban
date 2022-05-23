@@ -1,0 +1,18 @@
+$nomention
+$allowRoleMentions[]
+$onlyIf[$guildID!=;]
+$onlyPerms[ban; You don't have the `BAN_MEMBERS` permission.]
+$argsCheck[>1; Try doing that again with the syntax `&unban <id>`.]
+$onlyBotPerms[ban; I don't have the `BAN_MEMBERS` permission.]
+$onlyIf[$isNumber[$message[1]]==true;Please provide a valid user ID to unban.]
+$onlyIf[$userExists[$message[1]]==true; Please provude a valid user ID to unban.]
+$try
+$unbanID[$message[1]]
+$addCmdReactions[✅]
+$sendEmbedMessage[961161255375241257;; Moderation Case - Unban;;**User**
+$username[$message[1]]#$discriminator[$message[1]] (`$message[1]`)
+**Responsible Moderator**
+$username#$discriminator[] (`$authorID`);fffff0;;;;;;;true;false]
+$catch
+Unanticipated error: `$error[message]`
+$endtry
