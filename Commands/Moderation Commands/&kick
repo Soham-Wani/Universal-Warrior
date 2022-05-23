@@ -1,0 +1,41 @@
+$nomention
+$allowRoleMentions[]
+$onlyIf[$guildID!=;]
+$onlyPerms[kick; You don't have the `KICK_MEMBERS` permission.]
+$argsCheck[>2; Try doing that again with the syntax `&kick <@user/id> <reason>`.]
+$onlyBotPerms[kick; I don't have the `KICK_MEMBERS` permission.]
+$if[$isNumber[$message[1]]==true]
+$onlyIf[$message[1]!=$authorID; You can't kick yourself idiot!]
+$onlyIf[$message[1]!=976547251595919462; For real? You want to kick me? The audacity to try that! Jeez!]
+$onlyIf[$userExists[$message[1]]==true; Please provide a valid user ID.]
+$try
+$kick[$message[1];$replaceText[$message;$message[1];;1]]
+$addCmdReactions[✅]
+$sendEmbedMessage[961161255375241257;; Moderation Case - Kick;;**User**
+$username[$message[1]]#$discriminator[$message[1]] (`$message[1]`)
+**Responsible Moderator**
+$username#$discriminator[] (`$authorID`)
+**Reason**
+$noMentionMessage;fffff0;;;;;;;true;false]
+$catch
+Unanticipated error: `$error[message]`
+$endtry
+$else
+$if[$isNumber[$message[1]]==false]
+$onlyIf[$mentioned[1]!=$authorID; You can't kick yourself idiot!]
+$onlyIf[$mentioned[1]!=976547251595919462; For real? You want to kick me? The audacity to try that! Jeez!]
+$onlyIf[$userExists[$mentioned[1]]==true; Please mention a valid user.]
+$try
+$kick[$mentioned[1;no];$noMentionMessage]
+$addCmdReactions[✅]
+$sendEmbedMessage[961161255375241257;; Moderation Case - Kick;;**User**
+$username[$mentioned[1]]#$discriminator[$mentioned[1]] (`$mentioned[1]`)
+**Responsible Moderator**
+$username#$discriminator[] (`$authorID`)
+**Reason**
+$noMentionMessage;fffff0;;;;;;;true;false]
+$catch
+Unanticipated error: `$error[message]` 
+$endtry
+$endif
+$endif
