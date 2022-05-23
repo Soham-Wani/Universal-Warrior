@@ -1,0 +1,11 @@
+$nomention
+$onlyIf[$guildID!=;]
+$onlyIf[$message!=;I need a question. How will the 8ball answer?]
+$deletecommand 
+$title[8Ball!]
+$addReactions[🤣;☺️;😔;😭]
+$color[fffff0]
+$footerIcon[$authorAvatar]
+$footer[Requested by $username]
+$description[**$message**
+**8ball says:** $randomText[```Yes```;```No```;```Not sure```;```You know it```;```Absolutely not```;```Absolutely yes```;```Can't say```;```Sorry but that question had soooo much cap for the answer```]]
