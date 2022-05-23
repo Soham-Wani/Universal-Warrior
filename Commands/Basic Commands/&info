@@ -1,0 +1,11 @@
+$nomention
+$title[Info command]
+$addField[How to get started?; Type `&help`]
+$addField[Who am I?; A custom moderation/utility bot for The Dank Universe]
+$addField[Why are all embeds colored white?; Please ask <@816292077075431447>]
+$addField[Where to report bugs?; No need to report. But if you need to, DM developer]
+$addField[Who made me?; I am developed by <@912297357339660309>]
+$color[fffff0]
+$footerIcon[$authorAvatar]
+$footer[$username]
+$addTimestamp
