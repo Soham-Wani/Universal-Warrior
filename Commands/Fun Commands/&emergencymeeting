@@ -1,0 +1,5 @@
+$nomention
+$onlyIf[$guildID!=;]
+$onlyIf[$message!=;Bruh! Add some text. How will I make a meme?]
+$color[fffff0]
+$image[https://vacefron.nl/api/emergencymeeting?text=$replaceText[$message; ;+;-1]]
