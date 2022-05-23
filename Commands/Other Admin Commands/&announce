@@ -1,0 +1,11 @@
+$nomention
+$allowRoleMentions[]
+$onlyIf[$guildID!=;]
+$onlyAdmin[Only admins can announce!]
+$onlyIf[$message!=; Bruh! Mention something to announce! Use the syntax `&announce <announcement>`]
+$description[$message]
+$footerIcon[$authorAvatar]
+$footer[Announced by $username]
+$addTimestamp
+$color[fffff0]
+$deletecommand
