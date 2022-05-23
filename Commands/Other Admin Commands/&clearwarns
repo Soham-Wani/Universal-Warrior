@@ -1,0 +1,32 @@
+$nomention
+$allowRoleMentions[]
+$onlyIf[$guildID!=;]
+$onlyPerms[kick;ban; You don't have the `KICK_MEMBERS` and `BAN_MEMBERS` permissions.]
+$onlyIf[$message!=; Bruh! Whose warns you want to clear? Use the syntax `&clearwarns <@user/id>`]
+$if[$isNumber[$message]==true]
+$onlyIf[$userExists[$message]==true; Please provide a valid user ID.]
+$try
+$setUserVar[warn;0;$message[1]]
+$addCmdReactions[✅]
+$sendEmbedMessage[961161255375241257;; Moderation Case - Clear Warns;;**User**
+$username[$message[1]]#$discriminator[$message[1]] (`$message[1]`)
+**Responsible Moderator**
+$username#$discriminator[] (`$authorID`);fffff0;;;;;;;true;false]
+$catch
+Unanticipated error: `$error[message]`
+$endtry
+$else
+$if[$isNumber[$message]==false]
+$onlyIf[$userExists[$mentioned[1]]==true; Please mention a valid user.]
+$try
+$setUserVar[warn;0;$mentioned[1]]
+$addCmdReactions[✅]
+$sendEmbedMessage[961161255375241257;; Moderation Case - Clear Warns;;**User**
+$username[$mentioned[1]]#$discriminator[$mentioned[1]] (`$mentioned[1]`)
+**Responsible Moderator**
+$username#$discriminator[] (`$authorID`);fffff0;;;;;;;true;false]
+$catch
+Unanticipated error: `$error[message]`
+$endtry
+$endif
+$endif
