@@ -1,0 +1,4 @@
+$nomention
+Successfully unlocked <#$mentionedChannels[1;yes]>!
+$onlyPerms[managechannels;You need the `MANAGE_CHANNELS` permission to use that!]
+$modifyChannelPerms[$mentionedChannels[1;yes];+sendmessages;$guildID]
