@@ -1,0 +1,41 @@
+$nomention
+$allowRoleMentions[]
+$onlyIf[$guildID!=;]
+$onlyPerms[ban; You don't have the `BAN_MEMBERS` permission.]
+$argsCheck[>2; Try doing that again with the syntax `&ban <@user/id> <reason>`.]
+$onlyBotPerms[ban; I don't have the `BAN_MEMBERS` permission.]
+$if[$isNumber[$message[1]]==true]
+$onlyIf[$message[1]!=$authorID; You can't ban yourself idiot!]
+$onlyIf[$message[1]!=976547251595919462; For real? You want to ban me? The audacity to try that! Jeez!]
+$onlyIf[$userExists[$message[1]]==true; Please provide a valid user ID.]
+$try
+$banID[$noMentionMessage;$message[1]]
+$addCmdReactions[✅]
+$sendEmbedMessage[961161255375241257;; Moderation Case - Ban;;**User**
+$username[$message[1]]#$discriminator[$message[1]] (`$message[1]`)
+**Responsible Moderator**
+$username#$discriminator[] (`$authorID`)
+**Reason**
+$noMentionMessage;fffff0;;;;;;;true;false]
+$catch
+Unanticipated error: `$error[message]` 
+$endtry
+$else
+$if[$isNumber[$message[1]]==false]
+$onlyIf[$mentioned[1]!=$authorID; You can't ban yourself idiot!]
+$onlyIf[$mentioned[1]!=976547251595919462; For real? You want to ban me? The audacity to try that! Jeez!]
+$onlyIf[$userExists[$mentioned[1]]==true; Please mention a valid user.]
+$try
+$banID[$noMentionMessage;$mentioned[1]]
+$addCmdReactions[✅]
+$sendEmbedMessage[961161255375241257;; Moderation Case - Ban;;**User**
+$username[$mentioned[1]]#$discriminator[$mentioned[1]] (`$mentioned[1]`)
+**Responsible Moderator**
+$username#$discriminator[] (`$authorID`)
+**Reason**
+$noMentionMessage;fffff0;;;;;;;true;false]
+$catch
+Unanticipated error: `$error[message]` 
+$endtry
+$endif
+$endif
