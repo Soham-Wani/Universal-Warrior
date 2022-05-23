@@ -1,0 +1,199 @@
+$nomention
+$if[$message==]
+$title[Help command]
+$description[Type `&help <command>` to know more about that command]
+$addField[Prefix; `&`]
+$addField[Basic commands; `help`, `info`]
+$addField[Fun commands; `8ball`, `water`, `changemymind`, `emergencymeeting`]
+$addField[Utility commands; `roll`, `choose`, `calc`, `si`]
+$addField[Moderation commands; `kick`, `ban`, `unban`, `timeout`, `untimeout`, `purge`, `warn`]
+$addField[Other admin commands; `ynpoll`, `announce`, `checkwarns`, `clearwarns`, `lock`, `unlock`]
+$color[fffff0]
+$footer[]
+$else
+$if[$message==help]
+$title[Help (`&help`)]
+$addField[Description; This command can be used to obtain a list of all commands or to know about any specific command.]
+$addField[Syntax; `&help <command(optional)>`]
+$addField[Type; Basic command]
+$color[fffff0]
+$else
+$if[$message==info]
+$title[Info (`&info`)]
+$addField[Description; This command can be used to know more about the bot. Some info, some facts!]
+$addField[Syntax; `&info`]
+$addField[Type; Basic command]
+$color[fffff0]
+$else
+$if[$message==8ball]
+$title[8ball (`&8ball`)]
+$addField[Description; This command can be used to ask 8ball any yes/no question and get a random answer. Not intended for taking important life decisions!]
+$addField[Syntax; `&8ball <your question>`]
+$addField[Type; Fun command]
+$color[fffff0]
+$else
+$if[$message==water]
+$title[Water (`&water`)]
+$addField[Description; This command can be used to make a water meme with custom text. That's it!]
+$addField[Syntax; `&water <memetext>`]
+$addField[Type; Fun command]
+$color[fffff0]
+$else
+$if[$message==changemymind]
+$title[Change My Mind (`&changemymind`)]
+$addField[Description; This command can be used to make a change my mind meme with custom text. That's it!]
+$addField[Syntax; `&changemymind <memetext>`]
+$addField[Type; Fun command]
+$color[fffff0]
+$else
+$if[$message==emergencymeeting]
+$title[Emergency Meeting (`&emergencymeeting`)]
+$addField[Description; This command can be used to make an Among Us emergency meeting meme with custom text. That's it!]
+$addField[Syntax; `&emergencymeeting`]
+$addField[Type; Fun command]
+$color[fffff0]
+$else
+$if[$message==roll]
+$title[Roll (`&roll`)]
+$addField[Description; This command can be used to roll any random number between 1 and given number. Default range is 6.]
+$addField[Syntax; `&roll <number(optional)>`]
+$addField[Type; Utility command]
+$color[fffff0]
+$else
+$if[$message==choose]
+$title[Choose (`&choose`)]
+$addField[Description; This command can be used to choose an option from given strings.]
+$addField[Syntax; `&choose <options seperated with spaces>`]
+$addField[Type; Utility command]
+$color[fffff0]
+$else
+$if[$message==calc]
+$title[Calculate (`&calc`)]
+$addField[Description; This command can be used to calculate any mathematical expression.]
+$addField[Syntax; `&calc <expression>`]
+$addField[Type; Utility command]
+$color[fffff0]
+$else
+$if[$message==si]
+$title[Serverinfo (`&si`)]
+$addField[Description; This command can be used to know about the server.]
+$addField[Syntax; `&si`]
+$addField[Type; Utility command]
+$color[fffff0]
+$else
+$if[$message==kick]
+$title[Kick (`&kick`)]
+$addField[Description; This command can be used to kick any user mentioned or by ID for given reason.]
+$addField[Syntax; `&kick <@user/id> <reason>`]
+$addField[Type; Moderation command]
+$color[fffff0]
+$else
+$if[$message==ban]
+$title[Ban (`&ban`)]
+$addField[Description; This command can be used to ban any mentioned user or by ID for given reason.]
+$addField[Syntax; `&ban <@user/id> <reason>`]
+$addField[Type; Moderation command]
+$color[fffff0]
+$else
+$if[$message==unban]
+$title[Unban (`&unban`)]
+$addField[Description; This command can be used unban a banned user with ID. We all make mistakes!]
+$addField[Syntax; `&unban <id>`]
+$addField[Type; Moderation command]
+$color[fffff0]
+$else
+$if[$message==timeout]
+$title[Timeout (`&timeout`)]
+$addField[Description; This command can be used to timeout an user. Provide time in minutes only.]
+$addField[Syntax; `&timeout <time in minutes> <@user/id>`]
+$addField[Type; Moderation command]
+$addField[Aliases; `timeout`, `mute`]
+$color[fffff0]
+$else
+$if[$message==untimeout]
+$title[Untimeout (`&untimeout`)]
+$addField[Description; This command can be used to untimeout an user. We all make mistakes!]
+$addField[Syntax; `&untimeout <@user/id>`]
+$addField[Type; Moderation command]
+$addField[Aliases; `untimeout`, `unmute`]
+$color[fffff0]
+$else
+$if[$message==purge]
+$title[Purge (`&purge`)]
+$addField[Description; This command can be used to delete messages. Just add the number ofessages to delete. Also keep them below 100 to avoid malfunctioning.]
+$addField[Syntax; `&purge <number of messages>`]
+$addField[Type; Moderation command]
+$color[fffff0]
+$else
+$if[$message==warn]
+$title[Warn (`&warn`)]
+$addField[Description; This command can be used warn a user.]
+$addField[Syntax; `&warn <@user/id> <reason>`]
+$addField[Type; Moderation command]
+$color[fffff0]
+$else
+$if[$message==ynpoll]
+$title[Yes-No Poll (`&ynpoll`)]
+$addField[Description; This command can be used to run an opinion poll for yes-no questions only.]
+$addField[Syntax; `&ynpoll <question>`]
+$addField[Type; Other admin command]
+$color[fffff0]
+$else
+$if[$message==announce]
+$title[Announce (`&announce`)]
+$addField[Description; Used to announce. It literally says 'announce'! What do you expect?]
+$addField[Syntax; `&announce <announcement>`]
+$addField[Type; Other admin command]
+$color[fffff0]
+$else
+$if[$message==checkwarns]
+$title[Check Warns (`&checkwarns`)]
+$addField[Description; Check how many warns a user has.]
+$addField[Syntax; `&checkwarns <@user/id>`]
+$addField[Type; Other admin command]
+$color[fffff0]
+$else
+$if[$message==clearwarns]
+$title[Clear Warns (`&clearwarns`)]
+$addField[Description; This command can be used to clear warns off an user. Yep! Totally gone!]
+$addField[Syntax; `&clearwarns <@user/id>`]
+$addField[Type; Other admin command]
+$color[fffff0]
+$else
+$if[$message==lock]
+$title[Lock (`&lock`)]
+$addField[Description; This command can be used to lock a channel.]
+$addField[Syntax; `&lock <#channel(optional)>`]
+$addField[Type; Other admin command]
+$color[fffff0]
+$else
+$if[$message==unlock]
+$title[Unlock (`&unlock`)]
+$addField[Description; This command can be used to unlock a channel.]
+$addField[Syntax; `&unlock <#channel(optional)>`]
+$addField[Type; Other admin command]
+$color[fffff0]
+$endif
+$endif
+$endif
+$endif
+$endif
+$endif
+$endif
+$endif
+$endif
+$endif
+$endif
+$endif
+$endif
+$endif
+$endif
+$endif
+$endif
+$endif
+$endif
+$endif
+$endif
+$endif
+$endif
+$endif
