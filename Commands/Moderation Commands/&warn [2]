@@ -1,0 +1,34 @@
+$nomention
+$allowRoleMentions[]
+$onlyIf[$guildID!=;]
+$onlyPerms[kick;ban;]
+$argsCheck[>2;]
+$if[$isNumber[$message[1]]==true]
+$onlyIf[$userExists[$message[1]]==true;]
+$onlyIf[$isBot[$message[1]]==false;]
+$try
+$onlyIf[$isUserDMEnabled[$message[1]]==true; Failed to warn user. But the warning has been noted in the records!]
+$dm[$message[1]]
+$title[You have been warned in $serverName[$guildID]]
+$description[**Reason:** $noMentionMessage]
+$color[fffff0]
+$addCmdReactions[👍🏽]
+$catch
+Unanticipated error: `$error[message]`
+$endtry
+$else
+$if[$isNumber[$message[1]]==false]
+$onlyIf[$userExists[$mentioned[1]]==true;]
+$onlyIf[$isBot[$mentioned[1]]==false;]
+$try
+$onlyIf[$isUserDMEnabled[$mentioned[1]]==true; Failed to warn user. But the warning has been noted in the records!]
+$dm[$mentioned[1]]
+$title[You have been warned in $serverName[$guildID]]
+$description[**Reason:** $noMentionMessage]
+$color[fffff0]
+$addCmdReactions[👍🏽]
+$catch
+Unanticipated error: `$error[message]`
+$endtry
+$endif
+$endif
