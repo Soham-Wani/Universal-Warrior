@@ -1,0 +1,9 @@
+$nomention
+$allowRoleMentions[]
+$onlyIf[$guildID!=;]
+$onlyPerms[managemessages; You don't have the `MANAGE_MESSAGES` permission.]
+$onlyBotPerms[managemessages; I don't have the `MANAGE_MESSAGES` permission.]
+$onlyIf[$message[1]!=; Please specify number of messages to delete! Use the syntax `&purge <number>`]
+$onlyIf[$isNumber[$message[1]]==true;  Please specify a valid number of messages to delete. Use the syntax `&purge <number>`]
+$deletecommand
+$clear[$message[1]]
