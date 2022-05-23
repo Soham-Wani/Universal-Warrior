@@ -1,0 +1,14 @@
+$nomention
+$allowRoleMentions[]
+$onlyIf[$guildID!=;]
+$title[Opinion Poll]
+$onlyAdmin[Only admins can create polls!]
+$onlyIf[$message!=; Lmao! Its a poll! Ask a question first.
+Use the syntax `&poll <question>`]
+$addReactions[✅;❌]
+$description[$message] 
+$footerIcon[$authorAvatar]
+$footer[Asked by $username]
+$addTimestamp
+$color[fffff0]
+$deletecommand
