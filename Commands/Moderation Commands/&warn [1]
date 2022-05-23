@@ -1,0 +1,38 @@
+$nomention
+$allowRoleMentions[]
+$onlyIf[$guildID!=;]
+$onlyPerms[kick;ban; You don't have the `KICK_MEMBERS` and `BAN_MEMBERS` permissions.]
+$argsCheck[>2; Try doing that again with the syntax `&warn <@user/id> <warning>`.]
+$if[$isNumber[$message[1]]==true]
+$onlyIf[$userExists[$message[1]]==true; Please provide a valid user ID.]
+$onlyIf[$isBot[$message[1]]==false;You can't warn bots!]
+$try
+$setUserVar[warn;$sum[$getUserVar[warn;$message[1]];1];$message[1]]
+$addCmdReactions[✅]
+$sendEmbedMessage[961161255375241257;; Moderation Case - Warn ($getUserVar[warn;$message[1]]);;**User**
+$username[$message[1]]#$discriminator[$message[1]] (`$message[1]`)
+**Responsible Moderator**
+$username#$discriminator[] (`$authorID`)
+**Reason**
+$noMentionMessage;fffff0;;;;;;;true;false]
+$catch
+Unanticipated error: `$error[message]`
+$endtry
+$else
+$if[$isNumber[$message[1]]==false]
+$onlyIf[$userExists[$mentioned[1]]==true; Please mention a valid user.]
+$onlyIf[$isBot[$mentioned[1]]==false;You can't warn bots!]
+$try
+$setUserVar[warn;$sum[$getUserVar[warn;$mentioned[1]];1];$mentioned[1]]
+$addCmdReactions[✅]
+$sendEmbedMessage[961161255375241257;; Moderation Case - Warn ($getUserVar[warn;$mentioned[1]]);;**User**
+$username[$mentioned[1]]#$discriminator[$mentioned[1]] (`$mentioned[1]`)
+**Responsible Moderator**
+$username#$discriminator[] (`$authorID`)
+**Reason**
+$noMentionMessage;fffff0;;;;;;;true;false]
+$catch
+Unanticipated error: `$error[message]`
+$endtry
+$endif
+$endif
