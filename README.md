@@ -6,7 +6,7 @@ It is not the best bot in the world.  And yes, I no longer work on it due to, ac
 
 It is made in a probably fairly uncommon language BDscript 2. The official documentation can be found [here](https://nilpointer-software.github.io/bdfd-wiki/foreword.html). I don't know whom it may help, but yes, it's out here.
 
-## Notes to other developers
+## Notes To Other Developers
 Notice how there are two warn commands in "Moderation Commands" file? They both have the same trigger `&warn`. You need to paste the codes for 2 seperate commands with the same trigger. 
 
 Also `&timeout`, `&mute` and `&untimeout`, `&unmute` are just aliases, so yea!
