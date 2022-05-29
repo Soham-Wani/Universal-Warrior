@@ -1,6 +1,6 @@
 # Universal-Warrior
 
-Universal Warrior was a private Discord bot I made for the Discord server [The Dank Universe](https://discord.gg/sUPgd6TqEf) (Yep! That's some free advertisement.).
+Universal Warrior was a private Discord bot I made for the Discord server [The Dank Universe](https://discord.gg/sUPgd6TqEf) (Yep! That's some free advertisement).
 
 ## Information
 
